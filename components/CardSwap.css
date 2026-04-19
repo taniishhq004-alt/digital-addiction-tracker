@@ -1,0 +1,111 @@
+/* components/CardSwap.css */
+
+.card-swap-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(5%, 20%);
+  transform-origin: bottom right;
+  perspective: 900px;
+  overflow: visible;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  background: rgba(20, 20, 40, 0.92);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* Card inner content styling */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(160deg, rgba(91,94,244,0.18) 0%, rgba(0,0,0,0) 60%);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card-inner .card-cat-icon {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.card-inner h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+.card-inner p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card-inner .card-badge {
+  display: inline-block;
+  background: rgba(91,94,244,0.5);
+  border: 1px solid rgba(91,94,244,0.8);
+  color: #c7d2fe;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.card-inner .card-badge.red    { background:rgba(239,68,68,0.35); border-color:rgba(239,68,68,0.7); color:#fca5a5; }
+.card-inner .card-badge.green  { background:rgba(16,185,129,0.35);border-color:rgba(16,185,129,0.7);color:#6ee7b7; }
+.card-inner .card-badge.orange { background:rgba(245,158,11,0.35);border-color:rgba(245,158,11,0.7);color:#fcd34d; }
+.card-inner .card-badge.purple { background:rgba(139,92,246,0.4); border-color:rgba(139,92,246,0.8);color:#ddd6fe; }
+
+.card-inner .card-hours {
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.card-glow-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: 16px 16px 0 0;
+}
+
+@media (max-width: 768px) {
+  .card-swap-container {
+    transform: scale(0.75) translate(25%, 25%);
+  }
+}
+@media (max-width: 480px) {
+  .card-swap-container {
+    transform: scale(0.55) translate(25%, 25%);
+  }
+}
