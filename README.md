@@ -24,7 +24,7 @@ The project demonstrates core **DBMS concepts** including:
 - ⚠️ **Limit Alerts** — Red/yellow alerts using SQL `HAVING` clause
 - 📋 **Filterable Records** — Filter all DB rows by user, category, or date
 - 📄 **PDF Report** — Printable report with category breakdown and violations
-- 🗄️ **SQL Demo Page** — 6 live queries running against the database (great for viva!)
+- 🗄️ **SQL Demo Page** — 6 live queries running against the database 
 - 🎴 **CardSwap Animation** — GSAP 3D animated card stack on the dashboard
 - 👤 **Multi-user Support** — Each user has their own limits and usage history
 
